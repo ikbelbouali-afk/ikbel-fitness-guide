@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>أساسيات الفتنس — مع الكوتش إقبال</title>
+
+  <meta name="description" content="دليل معلومات عامة عالفتنس مع الكوتش إقبال: التغذية، التدريب، الراحة، المكمّلات، والأخطاء الشائعة. معلومات بسيطة وصحيحة باش تبدا على أساس متين." />
+  <meta name="keywords" content="فتنس, تغذية, تدريب, كوتش إقبال, Ikbel Coaching, بروتين, تنشيف, تضخيم, حمل متدرّج, تونس" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="author" content="Ikbel Coaching" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_TN" />
+  <meta property="og:title" content="أساسيات الفتنس — مع الكوتش إقبال" />
+  <meta property="og:description" content="معلومات عامة عالفتنس: تغذية، تدريب، راحة، مكمّلات، وأخطاء شائعة." />
+  <meta property="og:site_name" content="Ikbel Coaching" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050505'/%3E%3Crect x='2' y='2' width='60' height='60' rx='15' fill='none' stroke='%2321CFFF' stroke-width='2'/%3E%3Ctext x='32' y='44' font-size='30' font-weight='900' text-anchor='middle' fill='%2321CFFF' font-family='Arial'%3EIK%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:#050505; --panel:#0C0C0E; --card:#141416; --line:#1E1E22; --line-2:#2A2A30;
+      --ink:#FFFFFF; --soft:#D7D7DB; --muted:#9A9AA2; --faint:#6E6E76;
+      --cyan:#21CFFF; --cyan-hi:#5CDCFF; --gold:#EFBF04; --gold-hi:#FFD22E; --on-gold:#141005;
+      --font:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;
+      --font-en:'Inter','Segoe UI',sans-serif;
+      --maxw:1080px; --pad-x:clamp(20px,5vw,64px); --pad-y:clamp(56px,8vw,96px);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%}
+    body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    h1,h2,h3{font-weight:800;line-height:1.15}
+    .cyan{color:var(--cyan)} .gold{color:var(--gold)}
+    ::selection{background:var(--cyan);color:#04121a}
+    .container{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad-x)}
+
+    /* header */
+    .hd{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+      padding:14px var(--pad-x);background:rgba(5,5,5,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .brand{font-family:var(--font-en);font-weight:800;letter-spacing:.14em;font-size:15px}
+    .brand b{color:var(--cyan)}
+    .hd__cta{font-weight:700;font-size:14px;color:var(--on-gold);background:var(--gold);padding:9px 18px;border-radius:10px;transition:.2s}
+    .hd__cta:hover{background:var(--gold-hi)}
+
+    /* hero */
+    .hero{position:relative;padding:clamp(70px,11vw,130px) var(--pad-x) clamp(48px,7vw,80px);text-align:center;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:
+      radial-gradient(60% 60% at 50% 0%,rgba(33,207,255,.14),transparent 70%),
+      radial-gradient(50% 50% at 80% 30%,rgba(239,191,4,.08),transparent 70%);pointer-events:none}
+    .hero__in{position:relative;max-width:760px;margin-inline:auto}
+    .kicker{display:inline-block;text-transform:uppercase;letter-spacing:.24em;font-family:var(--font-en);
+      font-weight:700;font-size:12px;color:var(--cyan);border:1px solid var(--line-2);padding:7px 16px;border-radius:100px;margin-bottom:22px}
+    .hero h1{font-size:clamp(30px,6.4vw,58px);letter-spacing:-.01em}
+    .hero p{color:var(--muted);font-size:clamp(15px,2.2vw,19px);margin-top:20px;max-width:600px;margin-inline:auto}
+    .hero__by{margin-top:14px;color:var(--soft);font-size:15px}
+    .hero__by b{color:var(--gold)}
+
+    /* section scaffolding */
+    .section{padding-block:var(--pad-y)}
+    .section--alt{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .head{max-width:640px;margin-bottom:44px}
+    .eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.22em;font-family:var(--font-en);
+      font-weight:700;font-size:12px;color:var(--cyan);margin-bottom:14px}
+    .section h2{font-size:clamp(25px,4.6vw,40px)}
+    .section .lead{font-size:16px;color:var(--muted);margin-top:12px}
+
+    /* cards grid */
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:.2s}
+    .card:hover{border-color:var(--line-2);transform:translateY(-3px)}
+    .card__ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;
+      background:rgba(33,207,255,.1);border:1px solid rgba(33,207,255,.22);margin-bottom:16px}
+    .card h3{font-size:19px;margin-bottom:8px}
+    .card p{color:var(--muted);font-size:15px}
+    .card ul{margin-top:12px;display:flex;flex-direction:column;gap:9px}
+    .card li{position:relative;padding-inline-start:22px;color:var(--soft);font-size:14.5px}
+    .card li::before{content:"";position:absolute;inset-inline-start:0;top:.7em;width:8px;height:8px;border-radius:50%;
+      background:var(--cyan);box-shadow:0 0 0 3px rgba(33,207,255,.15)}
+    .card li b{color:var(--ink)}
+
+    /* number stat row */
+    .facts{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:8px}
+    .fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;text-align:center}
+    .fact__n{font-family:var(--font-en);font-weight:900;font-size:clamp(26px,4vw,38px);color:var(--gold);line-height:1}
+    .fact__l{color:var(--muted);font-size:13.5px;margin-top:8px}
+
+    /* philosophy banner */
+    .philo{background:linear-gradient(120deg,rgba(33,207,255,.08),rgba(239,191,4,.06));
+      border:1px solid var(--line-2);border-radius:20px;padding:clamp(28px,5vw,48px);text-align:center}
+    .philo .tag{font-family:var(--font-en);font-weight:900;letter-spacing:.04em;font-size:clamp(20px,3.6vw,30px);color:var(--cyan)}
+    .philo p{color:var(--soft);font-size:16px;margin-top:14px;max-width:620px;margin-inline:auto}
+
+    /* mistakes list */
+    .mist{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .mist li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+      border-radius:12px;padding:16px 18px;color:var(--soft);font-size:15px}
+    .mist li span{color:#ff6b6b;font-weight:800;flex:none}
+
+    /* cta */
+    .cta{text-align:center}
+    .cta__box{background:var(--card);border:1px solid var(--line-2);border-radius:22px;padding:clamp(34px,6vw,64px);max-width:720px;margin-inline:auto}
+    .cta h2{font-size:clamp(24px,4.4vw,40px)}
+    .cta p{color:var(--muted);margin-top:14px;font-size:16px}
+    .btn{display:inline-block;font-weight:700;font-size:clamp(16px,2vw,19px);color:var(--on-gold);background:var(--gold);
+      padding:16px 42px;border-radius:12px;margin-top:26px;box-shadow:0 14px 44px rgba(239,191,4,.26);transition:.2s}
+    .btn:hover{background:var(--gold-hi);transform:translateY(-2px)}
+
+    /* disclaimer + footer */
+    .note{border:1px dashed var(--line-2);border-radius:12px;padding:16px 20px;color:var(--faint);font-size:13.5px;margin-top:34px}
+    .footer{border-top:1px solid var(--line);padding:30px var(--pad-x);display:flex;flex-wrap:wrap;gap:12px;
+      justify-content:space-between;align-items:center;color:var(--faint);font-size:13px}
+    .footer .brand{font-size:14px}
+
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+
+<body>
+  <header class="hd">
+    <a href="#top" class="brand">IKBEL <b>COACHING</b></a>
+    <a class="hd__cta" href="https://ikbel123.netlify.app/" target="_blank" rel="noopener">الكوتشينغ الشخصي</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__in">
+        <span class="kicker">دليل معلومات عامة</span>
+        <h1>أساسيات الفتنس اللي <span class="cyan">تلزمك</span> باش تبدا صحيح</h1>
+        <p>موش لازم تعقّدها. تغذية، تدريب، وراحة — كي تفهم الأساسيات، النتيجة تجي وحدها. هاو كل شي في بلاصة وحدة.</p>
+        <p class="hero__by">جمّعهم لك <b>الكوتش إقبال</b> — بلا تعقيد، بلا خرافات.</p>
+      </div>
+    </section>
+
+    <!-- NUTRITION -->
+    <section class="section" id="nutrition">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">1 · التغذية</span>
+          <h2>الماكلة هي <span class="cyan">70٪</span> من النتيجة</h2>
+          <p class="lead">تنجّم تتمرّن كيف الوحش، أما كان الماكلة موش مظبوطة، ما تشوف حتى تبديل. ابدا من هنا.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="card__ico">🔥</div>
+            <h3>السعرات الحرارية</h3>
+            <p>هي القاعدة الكل. جسمك يتبدّل حسب توازن السعرات:</p>
+            <ul>
+              <li><b>تنشيف</b> = عجز في السعرات (تاكل أقل من اللي تحرق).</li>
+              <li><b>تضخيم</b> = فائض بسيط (تاكل أكثر شويّة).</li>
+              <li><b>ثبات</b> = توازن (تحافظ على وزنك).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">🥩</div>
+            <h3>البروتين</h3>
+            <p>أهم عنصر لبناء العضل والحفاظ عليه وقت التنشيف:</p>
+            <ul>
+              <li>الهدف: <b>1.6 إلى 2.2غ</b> لكل كيلو من وزن جسمك.</li>
+              <li>مصادر: دجاج، حوت، بيض، لحم، عدس، ياغورت.</li>
+              <li>وزّعو على مدار النهار، موش وجبة وحدة.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">🍚</div>
+            <h3>الكربوهيدرات و الدهون</h3>
+            <p>موش عدوّك — هوما الطاقة و التوازن الهرموني:</p>
+            <ul>
+              <li><b>كارب</b> = طاقة للتمرين (رز، خبز، شعير، فواكه).</li>
+              <li><b>دهون صحية</b> = زيت زيتون، مكسّرات، أفوكا، بيض.</li>
+              <li>ما تحيّدهمش كامل — وازن بيناتهم.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">💧</div>
+            <h3>الماء</h3>
+            <p>أبسط حاجة و أكثر وحدة يهملوها الناس:</p>
+            <ul>
+              <li>الهدف: <b>2.5 إلى 3.5 لتر</b> في النهار.</li>
+              <li>يحسّن الأداء، الهضم، و التركيز.</li>
+              <li>العطش علامة متأخرة — اشرب قبل ما تعطش.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section class="section section--alt" id="training">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">2 · التدريب</span>
+          <h2>كيفاش تدرّب <span class="gold">بذكاء</span></h2>
+          <p class="lead">العضلة تكبر كي تعطيها سبب. المبدأ الوحيد اللي يهمّ فوق الكل: الحمل المتدرّج.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="card__ico">📈</div>
+            <h3>الحمل المتدرّج</h3>
+            <p>أهم مبدأ في التدريب كامل — زيد التحدّي شويّة بشويّة:</p>
+            <ul>
+              <li>زيد <b>وزن</b>، أو <b>تكرارات</b>، أو <b>حصص</b> مع الوقت.</li>
+              <li>كان تعاود نفس الوزن كل مرّة، الجسم ما عندوش سبب يتبدّل.</li>
+              <li>سجّل تمارينك باش تتبّع تقدّمك.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">🏋️</div>
+            <h3>التمارين المركّبة</h3>
+            <p>هي أساس أي برنامج — تشغّل عضلات برشة في نفس الوقت:</p>
+            <ul>
+              <li>سكوات، ديدليفت، بنش برس، صفّ (row)، عقلة.</li>
+              <li>تعطي أكبر نتيجة في أقل وقت.</li>
+              <li>التمارين العازلة (كيرل…) تجي بعدها، موش قبلها.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">🎯</div>
+            <h3>الفورم قبل الوزن</h3>
+            <p>الحركة الصحيحة أهم من الأثقال الكبيرة:</p>
+            <ul>
+              <li>وزن خفيف بفورم مظبوط &gt; وزن ثقيل بفوضى.</li>
+              <li>يحميك من الإصابات و يشغّل العضلة المستهدفة.</li>
+              <li>تعلّم الحركة الأول، بعدها زيد الوزن.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">🗓️</div>
+            <h3>التنظيم و التكرار</h3>
+            <p>الثبات في البرنامج أهم من البرنامج المثالي:</p>
+            <ul>
+              <li><b>3 إلى 5 حصص</b> في الجمعة كافية للأغلبية.</li>
+              <li>درّب كل عضلة <b>مرّتين</b> في الجمعة إذا تنجّم.</li>
+              <li>اثبت على برنامج <b>6-8 أسابيع</b> قبل ما تبدّل.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOVERY -->
+    <section class="section" id="recovery">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">3 · الراحة و الاستشفاء</span>
+          <h2>العضلة تكبر <span class="cyan">في الراحة</span>، موش في الجيم</h2>
+          <p class="lead">التمرين يهدّم، و الراحة تبني. كان ما ترتاحش مليح، تخسر نص التعب متاعك.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="card__ico">😴</div>
+            <h3>النوم</h3>
+            <p>أقوى مكمّل استشفاء موجود، و بلاش:</p>
+            <ul>
+              <li>الهدف: <b>7 إلى 9 ساعات</b> في الليل.</li>
+              <li>فيه يفرز الجسم هرمون النمو و يصلّح العضل.</li>
+              <li>نوم ناقص = جوع أكثر و أداء أقل.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">🧘</div>
+            <h3>أيام الراحة</h3>
+            <p>الراحة جزء من البرنامج، موش كسل:</p>
+            <ul>
+              <li>خلّي <b>يوم أو يومين</b> راحة في الجمعة.</li>
+              <li>المشي الخفيف (راحة نشطة) يساعد الاستشفاء.</li>
+              <li>كل <b>6-8 أسابيع</b> اعمل أسبوع أخفّ (deload).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__ico">🧠</div>
+            <h3>الضغط النفسي</h3>
+            <p>التوتر المزمن يعطّل النتايج و يزيد شهيّة:</p>
+            <ul>
+              <li>الضغط الزايد يرفع الكورتيزول.</li>
+              <li>يأثّر على النوم و القرارات الغذائية.</li>
+              <li>المشي، التنفّس، و الروتين يساعدو برشة.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPLEMENTS -->
+    <section class="section section--alt" id="supps">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">4 · المكمّلات</span>
+          <h2>المكمّلات <span class="gold">تكمّل</span> — ما تعوّضش</h2>
+          <p class="lead">90٪ من النتيجة من الماكلة و التدريب و النوم. المكمّلات كان مساعدة صغيرة فوق أساس متين.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="card__ico">🥤</div>
+            <h3>بروتين الواي</h3>
+            <p>سهولة موش سحر — طريقة عملية باش تكمّل حاجتك من البروتين كان الماكلة ما كفّاتش.</p>
+          </div>
+          <div class="card">
+            <div class="card__ico">⚡</div>
+            <h3>الكرياتين</h3>
+            <p>أكثر مكمّل مدروس و آمن. <b>3 إلى 5غ في النهار</b> يحسّن القوّة و الأداء. وقتاش ما تاخذو ما يهمّش.</p>
+          </div>
+          <div class="card">
+            <div class="card__ico">☕</div>
+            <h3>الكافيين</h3>
+            <p>يزيد التركيز و الطاقة قبل التمرين. قهوة عادية تكفي — ما تبالغش خاصة بالليل.</p>
+          </div>
+          <div class="card">
+            <div class="card__ico">🌞</div>
+            <h3>فيتامين D و أوميغا 3</h3>
+            <p>يدعّمو الصحة العامة و الهرمونات، خاصة كان ما تشوفش شمس برشة أو ما تاكلش حوت.</p>
+          </div>
+        </div>
+        <div class="note">⚠️ استشر طبيب قبل أي مكمّل جديد، خاصة كان عندك حالة صحية أو تاخذ دواء.</div>
+      </div>
+    </section>
+
+    <!-- MISTAKES -->
+    <section class="section" id="mistakes">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">5 · أخطاء شائعة</span>
+          <h2>أكثر <span class="cyan">غلطات</span> تعطّل تقدّمك</h2>
+        </div>
+        <ul class="mist">
+          <li><span>✕</span> تبدّل البرنامج و الدايت كل جمعة قبل ما تعطيهم وقت.</li>
+          <li><span>✕</span> تهمل البروتين و تركّز كان عالكارديو.</li>
+          <li><span>✕</span> تقارن روحك بناس على الأنستغرام (فلاتر و منشّطات).</li>
+          <li><span>✕</span> تدوّر على "أحسن تمرين" بلاصة ما تثبت على أي تمرين.</li>
+          <li><span>✕</span> تعتمد عالمكمّلات و تنسى الماكلة الحقيقية.</li>
+          <li><span>✕</span> تدرّب بشدّة و تنام 4 ساعات و تستغرب علاش ما تتقدّمش.</li>
+          <li><span>✕</span> ما تسجّلش تمارينك، فما تعرفش كان تتقدّم ولا لا.</li>
+          <li><span>✕</span> تستعجل النتيجة — التبديل الحقيقي ياخذ شهور، موش أيام.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FACTS + PHILOSOPHY -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="facts">
+          <div class="fact"><div class="fact__n">7-9</div><div class="fact__l">ساعات نوم في الليل</div></div>
+          <div class="fact"><div class="fact__n">1.6-2.2</div><div class="fact__l">غ بروتين / كغ وزن</div></div>
+          <div class="fact"><div class="fact__n">3-5</div><div class="fact__l">حصص تدريب في الجمعة</div></div>
+          <div class="fact"><div class="fact__n">6-8</div><div class="fact__l">أسابيع ثبات قبل التبديل</div></div>
+        </div>
+        <div class="philo" style="margin-top:40px">
+          <div class="tag">STIMULATE, DON'T ANNIHILATE</div>
+          <p>فلسفة الكوتش إقبال: حفّز العضلة باش تكبر — ما تدمّرهاش. الثبات و الذكاء يغلبو الشدّة العمياء. تمرين مظبوط + راحة + صبر = نتيجة تدوم.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="container">
+        <div class="cta__box">
+          <h2>حابب <span class="cyan">متابعة شخصية</span> تمشي على وضعيتك أنت؟</h2>
+          <p>هالصفحة معلومات عامة للجميع. أما كان تحب خطة مفصّلة، متابعة، و حد يحاسبك — الكوتشينغ 1-1 مع إقبال هو الحل.</p>
+          <a class="btn" href="https://ikbel123.netlify.app/" target="_blank" rel="noopener">اكتشف الكوتشينغ الشخصي</a>
+        </div>
+        <div class="note" style="max-width:720px;margin-inline:auto">
+          ⚕️ إخلاء مسؤولية: هالمحتوى معلومات تثقيفية عامة، موش نصيحة طبية. استشر مختص قبل أي تبديل كبير في الماكلة، التدريب، أو المكمّلات — خاصة كان عندك حالة صحية.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand">IKBEL <b style="color:var(--cyan)">COACHING</b> · أريانة، تونس</div>
+    <div dir="ltr">© <span id="year"></span> Ikbel Coaching</div>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
