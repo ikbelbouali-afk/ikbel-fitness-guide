@@ -118,8 +118,38 @@
       justify-content:space-between;align-items:center;color:var(--faint);font-size:13px}
     .footer .brand{font-size:14px}
 
+    /* calculator */
+    .calc{display:grid;gap:26px;grid-template-columns:1fr;align-items:start}
+    @media(min-width:820px){.calc{grid-template-columns:1.1fr .9fr}}
+    .calc__form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,30px)}
+    .field{margin-bottom:18px}
+    .field label{display:block;font-size:14px;color:var(--soft);margin-bottom:8px;font-weight:600}
+    .field input,.field select{width:100%;background:var(--bg);border:1px solid var(--line-2);color:var(--ink);
+      font-family:var(--font);font-size:15px;padding:12px 14px;border-radius:10px;outline:none;transition:.2s}
+    .field input:focus,.field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(33,207,255,.15)}
+    .seg{display:flex;gap:8px}
+    .seg button{flex:1;padding:12px;border-radius:10px;border:1px solid var(--line-2);background:var(--bg);
+      color:var(--muted);font-family:var(--font);font-size:15px;font-weight:600;transition:.15s}
+    .seg button.on{background:rgba(33,207,255,.12);border-color:var(--cyan);color:var(--cyan)}
+    .field-row{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+    .calc__btn{width:100%;font-weight:700;font-size:17px;color:var(--on-gold);background:var(--gold);
+      padding:15px;border-radius:12px;margin-top:6px;transition:.2s}
+    .calc__btn:hover{background:var(--gold-hi)}
+    .calc__out{background:linear-gradient(150deg,rgba(33,207,255,.07),rgba(239,191,4,.05));
+      border:1px solid var(--line-2);border-radius:18px;padding:clamp(24px,3.5vw,34px);position:sticky;top:90px}
+    .calc__out h3{font-size:18px;margin-bottom:6px}
+    .calc__out .hint{color:var(--muted);font-size:14px;margin-bottom:20px}
+    .res{display:flex;flex-direction:column;gap:14px}
+    .res__item{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+      padding:16px 18px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+    .res__lab{color:var(--soft);font-size:14.5px}
+    .res__val{font-family:var(--font-en);font-weight:900;font-size:24px}
+    .res__val.c{color:var(--cyan)} .res__val.g{color:var(--gold)}
+    .res__val small{font-family:var(--font);font-weight:600;font-size:13px;color:var(--muted)}
+    .res__ph{color:var(--faint);font-size:14.5px;text-align:center;padding:26px 0}
+
     @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-  </style>
+</style>
 </head>
 
 <body>
@@ -358,6 +388,60 @@
       </div>
     </section>
 
+    <!-- CALCULATOR -->
+    <section class="section" id="calc">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">6 · آلة حاسبة</span>
+          <h2>احسب <span class="cyan">سعراتك</span> و بروتينك</h2>
+          <p class="lead">دخّل معطياتك و شوف قدّاش تلزمك سعرات و بروتين حسب هدفك. تقدير تقريبي — ابدا بيه و عدّل حسب النتيجة.</p>
+        </div>
+        <div class="calc">
+          <form class="calc__form" id="calcForm" novalidate>
+            <div class="field">
+              <label>الجنس</label>
+              <div class="seg" id="segSex">
+                <button type="button" data-v="male" class="on">راجل</button>
+                <button type="button" data-v="female">مرا</button>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="age">العمر (سنة)</label><input id="age" type="number" inputmode="numeric" min="14" max="90" value="28" /></div>
+              <div class="field"><label for="height">الطول (سم)</label><input id="height" type="number" inputmode="numeric" min="120" max="230" value="175" /></div>
+            </div>
+            <div class="field"><label for="weight">الوزن (كغ)</label><input id="weight" type="number" inputmode="decimal" min="35" max="250" value="80" /></div>
+            <div class="field">
+              <label for="activity">مستوى النشاط</label>
+              <select id="activity">
+                <option value="1.2">قليل الحركة (خدمة مكتب، بلا تمرين)</option>
+                <option value="1.375">نشاط خفيف (تمرين 1-3 مرّات/جمعة)</option>
+                <option value="1.55" selected>متوسّط (تمرين 3-5 مرّات/جمعة)</option>
+                <option value="1.725">نشيط (تمرين 6-7 مرّات/جمعة)</option>
+                <option value="1.9">نشيط برشة (خدمة بدنية + تمرين)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>الهدف</label>
+              <div class="seg" id="segGoal">
+                <button type="button" data-v="cut" class="on">تنشيف</button>
+                <button type="button" data-v="maintain">ثبات</button>
+                <button type="button" data-v="bulk">تضخيم</button>
+              </div>
+            </div>
+            <button class="calc__btn" type="submit">احسب</button>
+          </form>
+
+          <div class="calc__out">
+            <h3>النتيجة متاعك</h3>
+            <p class="hint">تقدير يومي حسب معادلة Mifflin-St Jeor.</p>
+            <div class="res" id="calcRes">
+              <div class="res__ph">دخّل معطياتك و اضغط «احسب» باش تشوف النتيجة.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="section cta">
       <div class="container">
@@ -378,6 +462,47 @@
     <div dir="ltr">© <span id="year"></span> Ikbel Coaching</div>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    /* ---- calorie & protein calculator ---- */
+    (function(){
+      var sex='male', goal='cut';
+      function bindSeg(id, set){
+        var seg=document.getElementById(id);
+        seg.addEventListener('click',function(e){
+          var b=e.target.closest('button'); if(!b) return;
+          seg.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});
+          b.classList.add('on'); set(b.dataset.v);
+        });
+      }
+      bindSeg('segSex',function(v){sex=v;});
+      bindSeg('segGoal',function(v){goal=v;});
+
+      var GOALS={cut:{d:-500,lab:'تنشيف (عجز)'},maintain:{d:0,lab:'ثبات'},bulk:{d:300,lab:'تضخيم (فائض)'}};
+
+      function num(id){return parseFloat(document.getElementById(id).value);}
+      function row(lab,val,cls,unit){
+        return '<div class="res__item"><span class="res__lab">'+lab+'</span>'+
+          '<span class="res__val '+cls+'">'+val+(unit?' <small>'+unit+'</small>':'')+'</span></div>';
+      }
+
+      document.getElementById('calcForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        var age=num('age'), h=num('height'), w=num('weight'), act=parseFloat(document.getElementById('activity').value);
+        var out=document.getElementById('calcRes');
+        if(!(age>0&&h>0&&w>0)){out.innerHTML='<div class="res__ph">تثبّت من المعطيات — عمّر العمر و الطول و الوزن بأرقام صحيحة.</div>';return;}
+        var bmr=10*w+6.25*h-5*age+(sex==='male'?5:-161);
+        var tdee=bmr*act;
+        var cals=Math.round((tdee+GOALS[goal].d)/10)*10;
+        var pLo=Math.round(w*1.6), pHi=Math.round(w*2.2);
+        out.innerHTML=
+          row('السعرات ('+GOALS[goal].lab+')', cals.toLocaleString('en'), 'g', 'سعرة/يوم')+
+          row('البروتين', pLo+'–'+pHi, 'c', 'غ/يوم')+
+          row('طاقة الثبات (TDEE)', Math.round(tdee/10)*10, '', 'سعرة')+
+          row('الأيض الأساسي (BMR)', Math.round(bmr), '', 'سعرة');
+      });
+    })();
+  </script>
 </body>
 </html>
