@@ -148,6 +148,8 @@
     .res__val.c{color:var(--cyan)} .res__val.g{color:var(--gold)}
     .res__val small{font-family:var(--font);font-weight:600;font-size:13px;color:var(--muted)}
     .res__ph{color:var(--faint);font-size:14.5px;text-align:center;padding:26px 0}
+    .res__warn{background:rgba(239,191,4,.08);border:1px solid rgba(239,191,4,.3);border-radius:12px;
+      padding:14px 16px;color:var(--gold-hi);font-size:13.5px;line-height:1.7}
 
     @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -434,7 +436,7 @@
 
           <div class="calc__out">
             <h3>النتيجة متاعك</h3>
-            <p class="hint">تقدير يومي حسب معادلة Mifflin-St Jeor.</p>
+            <p class="hint">تقدير يومي حسب معادلة Mifflin-St Jeor. الدهون ≈ 25٪ من السعرات، و الكربوهيدرات هي الباقي.</p>
             <div class="res" id="calcRes">
               <div class="res__ph">دخّل معطياتك و اضغط «احسب» باش تشوف النتيجة.</div>
             </div>
@@ -496,12 +498,28 @@
         var bmr=10*w+6.25*h-5*age+(sex==='male'?5:-161);
         var tdee=bmr*act;
         var cals=Math.round((tdee+GOALS[goal].d)/10)*10;
-        var pLo=Math.round(w*1.6), pHi=Math.round(w*2.2);
+
+        /* Safety floor: never recommend below ~1200 kcal (women) / 1500 (men). */
+        var floor=(sex==='male')?1500:1200, floored=false;
+        if(cals<floor){ cals=floor; floored=true; }
+
+        /* Macro split — protein 1.9 g/kg, but capped at 35% of calories so heavier
+           users cutting don't get their carbs squeezed to nothing (protein scales with
+           total bodyweight, which overshoots when there's more fat mass).
+           Fat 25% of calories with a 40 g essential floor; carbs take the remainder. */
+        var pG=Math.min(Math.round(w*1.9), Math.floor(cals*0.35/4));
+        var fG=Math.max(Math.round(cals*0.25/9), 40);
+        var cG=Math.round((cals-pG*4-fG*9)/4);
+        if(cG<0){ fG=Math.max(40, Math.floor((cals-pG*4)/9)); cG=Math.max(0, Math.round((cals-pG*4-fG*9)/4)); }
+
         out.innerHTML=
           row('السعرات ('+GOALS[goal].lab+')', cals.toLocaleString('en'), 'g', 'سعرة/يوم')+
-          row('البروتين', pLo+'–'+pHi, 'c', 'غ/يوم')+
+          row('البروتين', pG, 'c', 'غ/يوم')+
+          row('الدهون', fG, 'c', 'غ/يوم')+
+          row('الكربوهيدرات', cG, 'c', 'غ/يوم')+
           row('طاقة الثبات (TDEE)', Math.round(tdee/10)*10, '', 'سعرة')+
-          row('الأيض الأساسي (BMR)', Math.round(bmr), '', 'سعرة');
+          row('الأيض الأساسي (BMR)', Math.round(bmr), '', 'سعرة')+
+          (floored?'<div class="res__warn">⚠️ العجز المحسوب يهبط تحت الحد الآمن، فرفّعناه لـ '+floor+' سعرة. عجز بالشويّة أحسن — و استشر مختص قبل ما تنزل أكثر.</div>':'');
       });
     })();
   </script>
