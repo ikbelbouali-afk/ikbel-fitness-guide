@@ -14,6 +14,21 @@ CTA للكوتشينغ + إخلاء مسؤولية → فوتر.
 
 كل شي في `index.html` وحيد (CSS + JS inline). الخطوط من Google Fonts CDN.
 
+## منتجات TREC (كود IKBEL −20٪)
+
+قسم `#trec` بعد المكمّلات: 6 منتجات من https://trectunisie.com (Whey، Creatine، Boogieman،
+Omega 3 + D3، Oat Gainer، Multivitamin) + صندوق كود مع زر نسخ. زادة رابط في الـ Hero،
+رابط تحت قسم المكمّلات، و nudge تحت نتيجة الآلة الحاسبة (Whey للتنشيف/الثبات، Gainer للتضخيم).
+
+- **البيانات:** مصفوفة `TREC` في الـ `<script>` (handle، اسم، وصف، طريقة الاستعمال، سوم احتياطي).
+- **السوم و المخزون live:** كل زيارة تقرا `trectunisie.com/products/<handle>.js`
+  (Shopify يسمح بالـ CORS). كان فشل، يبقى السوم الاحتياطي. كان المنتج نفذ كامل، البطاقة تولّي «نفذ مؤقتًا».
+- **الصور:** مباشرة من `cdn.shopify.com` بـ `&width=500` — ما فماش صور في الـ repo.
+- **زر الشراء:** `trectunisie.com/discount/IKBEL?redirect=/products/<handle>` — يحطّ الكود أوتوماتيك.
+  الروابط `rel="sponsored"`.
+- **باش تزيد منتج:** زيد object في `TREC` بالـ handle متاعو (آخر جزء من رابط المنتج).
+- ⚠️ صلاحية الكود ما تتأكّدتش من صفحة الدفع — Shopify يقبل أي كود في الرابط.
+
 ## آلة حاسبة السعرات
 
 قسم `#calc` — vanilla JS، بلا مكتبات:

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>أساسيات الفتنس — مع الكوتش إقبال</title>
 
-  <meta name="description" content="دليل معلومات عامة عالفتنس مع الكوتش إقبال: التغذية، التدريب، الراحة، المكمّلات، والأخطاء الشائعة. معلومات بسيطة وصحيحة باش تبدا على أساس متين." />
+  <meta name="description" content="دليل معلومات عامة عالفتنس مع الكوتش إقبال: التغذية، التدريب، الراحة، المكمّلات، والأخطاء الشائعة. و −20٪ على منتجات TREC Nutrition بالكود IKBEL." />
   <meta name="keywords" content="فتنس, تغذية, تدريب, كوتش إقبال, Ikbel Coaching, بروتين, تنشيف, تضخيم, حمل متدرّج, تونس" />
   <meta name="theme-color" content="#050505" />
   <meta name="author" content="Ikbel Coaching" />
@@ -151,6 +151,58 @@
     .res__warn{background:rgba(239,191,4,.08);border:1px solid rgba(239,191,4,.3);border-radius:12px;
       padding:14px 16px;color:var(--gold-hi);font-size:13.5px;line-height:1.7}
 
+    .res__nudge{display:block;border:1px dashed var(--line-2);border-radius:12px;padding:14px 16px;
+      color:var(--soft);font-size:14px;line-height:1.7;transition:.2s}
+    .res__nudge:hover{border-color:var(--gold)}
+    .res__nudge b{color:var(--gold)}
+
+    /* TREC promo */
+    .promo{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:10px 18px;border-radius:100px;
+      background:rgba(239,191,4,.1);border:1px solid rgba(239,191,4,.35);color:var(--soft);font-size:15px;transition:.2s}
+    .promo:hover{background:rgba(239,191,4,.18)}
+    .promo b{font-family:var(--font-en);color:var(--gold);letter-spacing:.08em}
+    .supps-link{display:inline-block;margin-top:18px;color:var(--gold);font-weight:700;font-size:15px}
+    .supps-link:hover{color:var(--gold-hi)}
+
+    .code{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;
+      background:linear-gradient(120deg,rgba(239,191,4,.1),rgba(33,207,255,.06));
+      border:2px dashed rgba(239,191,4,.55);border-radius:18px;padding:clamp(20px,3vw,28px);margin-bottom:34px}
+    .code__txt{color:var(--soft);font-size:15px}
+    .code__txt strong{display:block;font-size:clamp(20px,3.4vw,26px);color:var(--ink);margin-bottom:2px}
+    .code__txt strong span{color:var(--gold)}
+    .code__right{display:flex;align-items:center;gap:10px}
+    .code__val{font-family:var(--font-en);font-weight:900;font-size:clamp(24px,4vw,32px);letter-spacing:.14em;
+      color:var(--gold);background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:8px 20px}
+    .code__copy{font-weight:700;font-size:15px;color:var(--on-gold);background:var(--gold);padding:13px 20px;border-radius:12px;transition:.2s}
+    .code__copy:hover{background:var(--gold-hi)}
+    .code__fine{flex-basis:100%;color:var(--faint);font-size:12.5px}
+
+    .prods{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+    .prod{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s}
+    .prod:hover{border-color:var(--line-2);transform:translateY(-3px)}
+    .prod__img{position:relative;background:#F4F4F5;aspect-ratio:1/1;display:grid;place-items:center}
+    .prod__img img{width:78%;height:78%;object-fit:contain}
+    .prod__tag{position:absolute;top:12px;inset-inline-start:12px;font-size:12px;font-weight:700;color:#04121a;
+      background:var(--cyan);padding:4px 10px;border-radius:100px}
+    .prod__body{display:flex;flex-direction:column;flex:1;padding:20px 20px 22px}
+    .prod__name{font-family:var(--font-en);font-weight:800;font-size:17px;letter-spacing:.01em;direction:ltr;text-align:right}
+    .prod__desc{color:var(--muted);font-size:14.5px;margin-top:8px}
+    .prod__use{color:var(--soft);font-size:13.5px;margin-top:12px;padding:10px 12px;background:var(--bg);border-radius:10px;border:1px solid var(--line)}
+    .prod__use b{color:var(--cyan)}
+    .prod__warn{color:#ffb86b;font-size:12.5px;margin-top:8px}
+    .prod__price{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:18px}
+    .prod__new{font-family:var(--font-en);font-weight:900;font-size:24px;color:var(--gold)}
+    .prod__new small{font-family:var(--font);font-size:13px;font-weight:600;color:var(--muted)}
+    .prod__old{color:var(--faint);text-decoration:line-through;font-size:14px}
+    .prod__lab{color:var(--faint);font-size:12px;margin-inline-start:auto}
+    .prod__buy{display:block;text-align:center;margin-top:14px;font-weight:700;font-size:16px;color:var(--on-gold);
+      background:var(--gold);padding:13px;border-radius:12px;transition:.2s}
+    .prod__buy:hover{background:var(--gold-hi)}
+    .prod.is-out{opacity:.55}
+    .prod.is-out .prod__buy{background:var(--line-2);color:var(--muted)}
+    .stack{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;color:var(--soft);font-size:15px}
+    .stack b{color:var(--cyan)}
+
     @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -169,6 +221,7 @@
         <h1>أساسيات الفتنس اللي <span class="cyan">تلزمك</span> باش تبدا صحيح</h1>
         <p>موش لازم تعقّدها. تغذية، تدريب، وراحة — كي تفهم الأساسيات، النتيجة تجي وحدها. هاو كل شي في بلاصة وحدة.</p>
         <p class="hero__by">جمّعهم لك <b>الكوتش إقبال</b> — بلا تعقيد، بلا خرافات.</p>
+        <a class="promo" href="#trec">🎁 −20٪ على منتجات TREC بالكود <b>IKBEL</b></a>
       </div>
     </section>
 
@@ -352,6 +405,34 @@
           </div>
         </div>
         <div class="note">⚠️ استشر طبيب قبل أي مكمّل جديد، خاصة كان عندك حالة صحية أو تاخذ دواء.</div>
+        <a class="supps-link" href="#trec">👇 المنتجات اللي ينصح بيهم الكوتش إقبال — بـ −20٪ بالكود IKBEL</a>
+      </div>
+    </section>
+
+    <!-- TREC PRODUCTS -->
+    <section class="section" id="trec">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">شريك رسمي · TREC NUTRITION TUNISIE</span>
+          <h2>المكمّلات اللي <span class="gold">ننصح بيهم</span> — بـ −20٪</h2>
+          <p class="lead">كي الماكلة و التمرين و النوم مظبوطين، هاذم يعاونوك توصل أسرع. منتجات TREC أصلية، متوفّرة في تونس، و بالكود متاعي تاخذ تخفيض 20٪ على الطلبية.</p>
+        </div>
+
+        <div class="code">
+          <div class="code__txt">
+            <strong>كود التخفيض: <span>−20٪</span></strong>
+            اكتبو وقت الدفع — ولا اضغط «اشري بالكود» و يتحطّ وحدو.
+          </div>
+          <div class="code__right">
+            <span class="code__val" id="trecCode">IKBEL</span>
+            <button class="code__copy" id="trecCopy" type="button">انسخ الكود</button>
+          </div>
+          <div class="code__fine">كود شراكة متاع الكوتش إقبال مع TREC Nutrition Tunisie. الأسوام تتحدّث أوتوماتيك من موقع trectunisie.com، و التخفيض يتحسب في صفحة الدفع.</div>
+        </div>
+
+        <div class="prods" id="trecGrid"></div>
+
+        <div class="stack">🎯 <b>تحب تبدا بزوز برك؟</b> Boogie Whey + Creatine 100٪ — هاذم الأساس اللي ينفعو الكل، سواء تنشيف ولا تضخيم. الباقي حسب هدفك.</div>
       </div>
     </section>
 
@@ -468,6 +549,90 @@
   <script>
     document.getElementById('year').textContent=new Date().getFullYear();
 
+    /* ---- TREC products (partner code IKBEL, −20%) ---- */
+    var TREC_CODE='IKBEL', TREC_OFF=0.20, TREC_SHOP='https://trectunisie.com';
+    var CDN='https://cdn.shopify.com/s/files/1/0983/8873/8396/files/';
+    /* price = fallback in DT, refreshed live from the store on load (see refreshTrec) */
+    var TREC=[
+      { h:'boogie-whey-2kg', name:'BOOGIE WHEY 2KG', tag:'بروتين · للكل', price:279,
+        img:'BOOGIEWHEY_1000g_WAFER_V2_chocolate_600x600-72dpi_71c4a87b-c4fa-4a02-9084-aa443dcfa06b.jpg?v=1767486737',
+        desc:'أسهل طريقة باش توصل لهدف البروتين اليومي كي الماكلة ما تكفّيش. تنفع في أيام التمرين و الراحة، و 2كغ تدوم معاك.',
+        use:'30غ (1.5 مغرفة) في 200مل ماء ولا حليب — مرّة ولا زوز في النهار.' },
+      { h:'creatine-mono-300g', name:'CREATINE 100%', tag:'قوّة · أداء', price:129,
+        img:'c100-600_1.webp?v=1768094827',
+        desc:'أكثر مكمّل مدروس في العالم. يحسّن الأداء في المجهودات القصيرة و القويّة — التكرارات الثقيلة. فيه زادة فيتامين C.',
+        use:'مغرفة وحدة (4.1غ) كل يوم، حتى في أيام الراحة. الـ 300غ ≈ 70 يوم.' },
+      { h:'boogieman-300g-jar', name:'BOOGIEMAN PRE-WORKOUT', tag:'طاقة · قبل التمرين', price:139,
+        img:'trec-nutrition-boogieman-preworkout-caffeine-w8control-dieet-turnhout-sportvoeding-sportdieet-trainingsschema-gym-fitness-spiermassa-kracht.png?v=1767309610',
+        desc:'للحصص الصعيبة كي تحب تركيز و طاقة زايدين. فيه 150مغ كافيين في الحصّة + مغنيزيوم للعضلات.',
+        use:'10غ (1.5 مغرفة) في 300مل ماء، 30 دقيقة قبل التمرين.',
+        warn:'⚠️ موش قبل النوم. موش للصغار و المرا الحامل.' },
+      { h:'omega-3-d3-sport-edition-120cap', name:'OMEGA 3 + D3 SPORT', tag:'صحّة عامة', price:119,
+        img:'p_14231_default_1.webp?v=1767405550',
+        desc:'أوميغا 3 (EPA + DHA) من زيت الحوت مع فيتامين D3 — خاصة للي ما ياكلش حوت برشة ولا ما يشوفش شمس.',
+        use:'كيما مكتوب على العلبة، مع الماكلة. 120 حبّة.' },
+      { h:'boogie-oat-gainer-2kg', name:'BOOGIE OAT GAINER 2KG', tag:'تضخيم', price:179,
+        img:'IMG_0074.webp?v=1767389020',
+        desc:'للي يلقى صعوبة ياكل برشة (hard gainer). بروتين + كربوهيدرات من الشوفان باش تزيد سعراتك بلا ما تتعب.',
+        use:'100غ في النهار في ماء ولا حليب — بين الوجبات ولا بعد التمرين.',
+        warn:'موش للتنشيف — برشة سعرات.' },
+      { h:'boogie-multivitamin-90cap', name:'BOOGIE MULTIVITAMIN', tag:'صحّة عامة', price:100,
+        img:'boogie-multivitamin-witaminy-i-mineraly.png?v=1767401317',
+        desc:'فيتامينات و معادن (B، C، D، E…) للي عندو نسق حياة ثقيل و ماكلتو موش ديما متوازنة. يكمّل — ما يعوّضش.',
+        use:'كيما مكتوب على العلبة. 90 حبّة.' }
+    ];
+
+    function dt(n){ return (Math.round(n*1000)/1000).toString(); }
+    function buyUrl(h){ return TREC_SHOP+'/discount/'+TREC_CODE+'?redirect='+encodeURIComponent('/products/'+h); }
+
+    function renderTrec(){
+      document.getElementById('trecGrid').innerHTML=TREC.map(function(p){
+        return '<article class="prod'+(p.out?' is-out':'')+'">'+
+          '<div class="prod__img"><span class="prod__tag">'+p.tag+'</span>'+
+            '<img src="'+CDN+p.img+'&width=500" alt="'+p.name+'" width="500" height="500" loading="lazy" /></div>'+
+          '<div class="prod__body">'+
+            '<h3 class="prod__name">'+p.name+'</h3>'+
+            '<p class="prod__desc">'+p.desc+'</p>'+
+            '<p class="prod__use"><b>كيفاش:</b> '+p.use+'</p>'+
+            (p.warn?'<p class="prod__warn">'+p.warn+'</p>':'')+
+            '<div class="prod__price">'+
+              '<span class="prod__new">'+dt(p.price*(1-TREC_OFF))+' <small>د.ت</small></span>'+
+              '<span class="prod__old">'+dt(p.price)+'</span>'+
+              '<span class="prod__lab">بالكود</span>'+
+            '</div>'+
+            '<a class="prod__buy" href="'+buyUrl(p.h)+'" target="_blank" rel="noopener sponsored">'+
+              (p.out?'نفذ مؤقتًا — شوف الموقع':'اشري بالكود −20٪')+'</a>'+
+          '</div></article>';
+      }).join('');
+    }
+
+    /* Pull current price + stock from the Shopify store (it allows cross-origin reads).
+       Any failure just keeps the fallback prices already rendered. */
+    function refreshTrec(){
+      if(!window.fetch) return;
+      Promise.all(TREC.map(function(p){
+        return fetch(TREC_SHOP+'/products/'+p.h+'.js').then(function(r){ return r.ok?r.json():null; })
+          .then(function(d){
+            if(!d||!d.variants) return;
+            var avail=d.variants.filter(function(v){return v.available;});
+            p.out=!avail.length;
+            var pool=avail.length?avail:d.variants;
+            p.price=Math.min.apply(null,pool.map(function(v){return v.price/100;}));
+          }).catch(function(){});
+      })).then(renderTrec);
+    }
+
+    renderTrec();
+    refreshTrec();
+
+    document.getElementById('trecCopy').addEventListener('click',function(){
+      var b=this, done=function(){ b.textContent='✓ تنسخ'; setTimeout(function(){b.textContent='انسخ الكود';},1800); };
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(TREC_CODE).then(done,function(){ selectCode(); }); }
+      else selectCode();
+      function selectCode(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('trecCode'));
+        var s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent='تحدّد — انسخو'; }
+    });
+
     /* ---- calorie & protein calculator ---- */
     (function(){
       var sex='male', goal='cut';
@@ -519,7 +684,10 @@
           row('الكربوهيدرات', cG, 'c', 'غ/يوم')+
           row('طاقة الثبات (TDEE)', Math.round(tdee/10)*10, '', 'سعرة')+
           row('الأيض الأساسي (BMR)', Math.round(bmr), '', 'سعرة')+
-          (floored?'<div class="res__warn">⚠️ العجز المحسوب يهبط تحت الحد الآمن، فرفّعناه لـ '+floor+' سعرة. عجز بالشويّة أحسن — و استشر مختص قبل ما تنزل أكثر.</div>':'');
+          (floored?'<div class="res__warn">⚠️ العجز المحسوب يهبط تحت الحد الآمن، فرفّعناه لـ '+floor+' سعرة. عجز بالشويّة أحسن — و استشر مختص قبل ما تنزل أكثر.</div>':'')+
+          (goal==='bulk'
+            ?'<a class="res__nudge" href="#trec">💪 صعيب تاكل <b>'+cals.toLocaleString('en')+' سعرة</b> كل يوم؟ Boogie Oat Gainer يزيدلك السعرات بسهولة — بـ <b>−20٪</b> بالكود <b>IKBEL</b> ↑</a>'
+            :'<a class="res__nudge" href="#trec">💪 صعيب توصل لـ <b>'+pG+'غ بروتين</b> بالماكلة برك؟ Boogie Whey تسهّلها — بـ <b>−20٪</b> بالكود <b>IKBEL</b> ↑</a>');
       });
     })();
   </script>
