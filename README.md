@@ -85,6 +85,6 @@ git push -u origin main
 ## ملاحظات
 
 - `serve.ps1` لازمو `SendChunked = $true` (موجود) — ما تنحّيهاش.
-- زر "الكوتشينغ الشخصي" و CTA النهائي يوجّهو لـ `https://ikbel123.netlify.app/`.
+- زر "الكوتشينغ الشخصي" و CTA النهائي يوجّهو لـ `https://ikbelfit.com/`.
 - المحتوى **معلومات عامة**، فيه إخلاء مسؤولية طبي — راجعو قبل أي نشر رسمي.
 - يحترم `prefers-reduced-motion`، mobile-first، RTL عربي تونسي.
